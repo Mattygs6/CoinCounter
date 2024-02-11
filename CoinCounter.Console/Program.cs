@@ -22,7 +22,7 @@ static void Run(decimal money)
     var dollars = (int)Math.Floor(money);
     var cents = (int)(Math.Floor(money * 100) % 100);
 
-    Console.WriteLine($"{money} can be distributed as:");
+    Console.WriteLine($"${money} can be distributed as:");
     foreach (var bill in Enum.GetValues<Dollars>().OrderDescending())
     {
         Console.WriteLine($"{bill}: {dollars / (int)bill}");
